@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "words": [
+    "Vignesh",
+    "VIGNESH",
+    "vignesh",
+    "socs",
+    "icard",
+    "hic",
+    "hmc",
+    "txd",
+    "cyanL",
+    "cyanS",
+    "indL",
+    "indS",
+    "prac",
+    "mysr",
+    "jittek",
+    "Thiruvananthapuram",
+    "Idukki"
+  ],
+  "ignorePaths": ["node_modules", "dist"]
+}
