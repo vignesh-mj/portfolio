@@ -11,9 +11,9 @@ const CHIPS = [
 ];
 
 const COMETS = [
-  { w: 180, top: '5%',  cls: 'cm-ind', dur: '5.5s', del: '0s'   },
-  { w: 110, top: '14%', cls: 'cm-cyn', dur: '4.5s', del: '4s'   },
-  { w: 230, top: '2%',  cls: 'cm-ind', dur: '7s',   del: '8.5s' },
+  { w: 180, top: '5%',  cls: 'cm-ind', dur: '11s', del: '0s'   },
+  { w: 110, top: '14%', cls: 'cm-cyn', dur: '9s',  del: '5s'   },
+  { w: 230, top: '2%',  cls: 'cm-ind', dur: '15s', del: '9s'   },
 ];
 
 export default function Hero() {
@@ -42,6 +42,13 @@ export default function Hero() {
   return (
     <section id="home" className="hero-sec" ref={secRef} onMouseMove={onMove}
       aria-label="Introduction">
+
+      {/* ── BG layer -1: solar system orbital rings ── */}
+      <div className="h-orbit-sys" aria-hidden="true">
+        <div className="h-orb-ring h-orr-1"><span className="h-orb-planet" /></div>
+        <div className="h-orb-ring h-orr-2"><span className="h-orb-planet h-orb-p2" /></div>
+        <div className="h-orb-ring h-orr-3"><span className="h-orb-planet h-orb-p3" /></div>
+      </div>
 
       {/* ── BG layer 0: floating gradient orbs ── */}
       <div className="h-bg-orbs" aria-hidden="true">
@@ -107,13 +114,42 @@ export default function Hero() {
 
         {/* Center: circle + photo + buttons */}
         <div className="h-photo-area">
-          <div className="h-circle-glow" aria-hidden="true" />
-          <div className="h-photo-wrap"  ref={photoRef}>
+
+          {/* Creative ellipse decoration */}
+          <div className="h-circle-glow" aria-hidden="true">
+            <div className="h-cg-glow" />
+            <div className="h-el h-el-3" />
+            <div className="h-el h-el-2">
+              {/* <span className="h-el-dot h-el-dot2" /> */}
+            </div>
+            <div className="h-el h-el-1">
+              
+            </div>
+          </div>
+
+          <div className="h-photo-wrap" ref={photoRef}>
             <img src={heroImg}
               alt="Vignesh M — React & Next.js Developer"
               className="h-photo"
               draggable="false" loading="eager" />
           </div>
+
+          {/* Floating achievement badges */}
+          <div className="h-fl hf-projs" aria-hidden="true">
+            <span className="hf-icon">⚡</span>
+            <div>
+              <b className="hf-val">15+</b>
+              <span className="hf-lbl">Projects</span>
+            </div>
+          </div>
+          <div className="h-fl hf-rating" aria-hidden="true">
+            <span className="hf-icon">★</span>
+            <div>
+              <b className="hf-val">5.0</b>
+              <span className="hf-lbl">Rating</span>
+            </div>
+          </div>
+
           <div className="h-btns">
             <button className="h-btn-p" onClick={() => go('projects')}>Portfolio ↗</button>
             <button className="h-btn-h" onClick={() => go('contact')}>Hire Me</button>

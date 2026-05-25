@@ -1,16 +1,28 @@
 const SERVICES = [
   {
-    name: 'UI/UX Design',
-    img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
+    num: '01',
+    name: 'UI / UX Design',
+    cat: 'Design',
+    desc: 'Pixel-perfect interfaces — from wireframes to polished Figma prototypes ready for dev handoff.',
+    tech: ['Figma', 'Framer', 'Prototyping'],
+    img: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=900&q=85',
   },
   {
+    num: '02',
     name: 'Web Development',
-    img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80',
+    cat: 'Engineering',
+    desc: 'Scalable React & Next.js apps — SSR, ISR, App Router and TypeScript from day one.',
+    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85',
     featured: true,
   },
   {
-    name: 'React & Next.js',
-    img: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
+    num: '03',
+    name: 'Performance & SEO',
+    cat: 'Optimization',
+    desc: 'Core Web Vitals tuning, ISR/SSG strategy, and technical SEO that actually ranks.',
+    tech: ['Lighthouse', 'Core Web Vitals', 'Analytics'],
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85',
   },
 ];
 
@@ -37,17 +49,30 @@ export default function Services() {
 
         <div className="svc-grid">
           {SERVICES.map((s, i) => (
-            <div key={s.name}
+            <article key={s.name}
               className={`svc-card rev d${i + 1}${s.featured ? ' svc-feat' : ''}`}>
 
-              <span className="svc-label">{s.name}</span>
+              <div className="svc-body">
+                <div className="svc-meta">
+                  <span className="svc-num">{s.num}</span>
+                  <span className="svc-cat">{s.cat}</span>
+                </div>
+                <h3 className="svc-name">{s.name}</h3>
+                <p className="svc-desc">{s.desc}</p>
+                <div className="svc-tech">
+                  {s.tech.map(t => (
+                    <span key={t} className="svc-tp">{t}</span>
+                  ))}
+                </div>
+              </div>
 
               <div className="svc-img-wrap">
                 <img src={s.img} alt={s.name} className="svc-img" loading="lazy" />
+                <div className="svc-ov" />
               </div>
 
               <div className="svc-arrow" aria-hidden="true">↗</div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

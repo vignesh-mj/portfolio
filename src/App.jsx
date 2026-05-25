@@ -5,9 +5,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import Services from './components/Services';
-import Skills from './components/Skills';
+import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
+import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -32,14 +34,17 @@ export default function App() {
       <Navbar />
       <main id="main" tabIndex="-1">
         <Hero />
-        {/* <Marquee /> */}
         <Services />
         <div className="section-sep" aria-hidden="true" />
-        <Skills />
+        <About />
         <div className="section-sep" aria-hidden="true" />
         <Experience />
         <div className="section-sep" aria-hidden="true" />
         <Projects />
+        {/* <div className="section-sep" aria-hidden="true" />
+        <Testimonials /> */}
+        {/* <div className="section-sep" aria-hidden="true" /> */}
+        {/* <Process /> */}
         <div className="section-sep" aria-hidden="true" />
         <Contact />
       </main>

@@ -7,4 +7,5 @@
   border: none;
   min-height: 100svh;
   display: block;
+  overflow-x: hidden;
 }
