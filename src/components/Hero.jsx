@@ -16,6 +16,8 @@ const COMETS = [
   { w: 230, top: '2%',  cls: 'cm-ind', dur: '15s', del: '9s'   },
 ];
 
+const TECHS = ['React', 'Next.js', 'TypeScript', 'Redux'];
+
 export default function Hero() {
   const role     = useTypewriter(ROLES, 78, 2400);
   const secRef   = useRef(null);
@@ -79,13 +81,17 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* ════════════════════════════════════════
+          DESKTOP LAYOUT  (hidden on mobile)
+      ════════════════════════════════════════ */}
+
       {/* ── Hello badge ── */}
-      <div className="h-badge">
+      <div className="h-badge h-desk">
         Hello! <span className="h-badge-star" aria-hidden="true">✦</span>
       </div>
 
       {/* ── Heading ── */}
-      <div className="h-head">
+      <div className="h-head h-desk">
         <h1 className="h-h1">
           I&apos;m <span className="h-name">Vignesh M,</span>
         </h1>
@@ -95,7 +101,7 @@ export default function Hero() {
       </div>
 
       {/* ── Main 3-col row ── */}
-      <div className="h-main">
+      <div className="h-main h-desk">
 
         {/* Left stats */}
         <div className="h-sl">
@@ -119,12 +125,8 @@ export default function Hero() {
           <div className="h-circle-glow" aria-hidden="true">
             <div className="h-cg-glow" />
             <div className="h-el h-el-3" />
-            <div className="h-el h-el-2">
-              {/* <span className="h-el-dot h-el-dot2" /> */}
-            </div>
-            <div className="h-el h-el-1">
-              
-            </div>
+            <div className="h-el h-el-2" />
+            <div className="h-el h-el-1" />
           </div>
 
           <div className="h-photo-wrap" ref={photoRef}>
@@ -162,13 +164,77 @@ export default function Hero() {
           <div className="h-expn">4+</div>
           <div className="h-expl">Years<br />Experience</div>
           <div className="h-techs">
-            {['React', 'Next.js', 'TypeScript', 'Redux'].map(t => (
-              <span key={t} className="h-tech">{t}</span>
-            ))}
+            {TECHS.map(t => <span key={t} className="h-tech">{t}</span>)}
           </div>
         </div>
 
       </div>
+
+      {/* ════════════════════════════════════════
+          MOBILE LAYOUT  (hidden on desktop)
+      ════════════════════════════════════════ */}
+      <div className="h-mob" aria-label="Introduction">
+
+        {/* Photo */}
+        <div className="hm-img-wrap">
+          <img src={heroImg}
+            alt="Vignesh M — React & Next.js Developer"
+            className="hm-img"
+            draggable="false" loading="eager" />
+        </div>
+
+        {/* Badge */}
+        <div className="hm-badge">
+          Hello! <span className="h-badge-star" aria-hidden="true">✦</span>
+        </div>
+
+        {/* Name + role */}
+        <h1 className="hm-h1">
+          I&apos;m <span className="h-name">Vignesh M,</span>
+        </h1>
+        <p className="hm-role" aria-live="polite">
+          {role}<span className="h-cur" aria-hidden="true" />
+        </p>
+
+        {/* CTA buttons */}
+        <div className="hm-btns">
+          <button className="h-btn-p" onClick={() => go('projects')}>Portfolio ↗</button>
+          <button className="h-btn-h" onClick={() => go('contact')}>Hire Me</button>
+        </div>
+
+        {/* Stats strip */}
+        <div className="hm-stats">
+          <div className="hm-avail">
+            <span className="h-sp-dot" aria-hidden="true" />
+            Available for Work
+          </div>
+
+          <p className="hm-desc">
+            4+ years building pixel-perfect, performant React &amp; Next.js web apps.
+            Highly recommended!
+          </p>
+
+          <div className="hm-nums">
+            <div className="hm-num-item">
+              <span className="hm-num">15+</span>
+              <span className="hm-lbl">Projects Shipped</span>
+            </div>
+            <div className="hm-divider" aria-hidden="true" />
+            <div className="hm-num-item">
+              <span className="hm-num">4+</span>
+              <span className="hm-lbl">Years Experience</span>
+            </div>
+          </div>
+
+          <div className="hm-techs">
+            {TECHS.map(t => <span key={t} className="h-tech">{t}</span>)}
+          </div>
+
+          <div className="hm-stars" aria-label="5 star rating">★★★★★</div>
+        </div>
+
+      </div>
+
     </section>
   );
 }
