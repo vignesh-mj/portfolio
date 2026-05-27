@@ -111,8 +111,8 @@ export default function Hero() {
           </div>
           <span className="h-qmark" aria-hidden="true">&ldquo;</span>
           <p className="h-qtxt">
-            4+ years building pixel-perfect, performant React &amp; Next.js
-            web apps. Highly recommended!
+            Figma to pixel-perfect React &amp; Next.js — Redux Toolkit,
+            TypeScript &amp; REST APIs shipped to production.
           </p>
           <div className="h-snum">15+</div>
           <div className="h-slbl">Projects Shipped</div>
@@ -210,8 +210,8 @@ export default function Hero() {
           </div>
 
           <p className="hm-desc">
-            4+ years building pixel-perfect, performant React &amp; Next.js web apps.
-            Highly recommended!
+            Figma to pixel-perfect React &amp; Next.js — Redux Toolkit,
+            TypeScript &amp; REST APIs shipped to production.
           </p>
 
           <div className="hm-nums">

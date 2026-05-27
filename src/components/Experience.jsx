@@ -3,28 +3,30 @@ const JOBS = [
     co: 'PracticeTek', badge: 'Current', role: 'React Developer',
     period: 'Jan 2024 – Present', main: true,
     bullets: [
-      'Built and maintained scalable web apps with React.js, Bootstrap & JavaScript serving thousands of daily users',
-      'Converted Figma designs into pixel-perfect, fully responsive React components',
-      'Improved performance via lazy loading, memoization & code splitting',
-      'Conducted code reviews & enforced team-wide best practices',
+      'Built and maintained scalable web apps with React.js, Bootstrap & JavaScript serving thousands of active users',
+      'Converted Figma designs into pixel-perfect, fully responsive React components — reducing UI revision cycles through direct designer collaboration',
+      'Improved performance via lazy loading, memoization & code splitting, achieving 98+ Lighthouse scores',
+      'Enhanced UI accessibility and cross-browser compatibility for a consistent experience across all devices',
+      'Conducted regular code reviews, enforced best practices & maintained clean, scalable codebases',
     ],
   },
   {
     co: 'Mysr', badge: '', role: 'React Developer',
     period: 'Mar 2023 – Jan 2024', main: false,
     bullets: [
-      'Integrated RESTful APIs with Axios & Fetch API for complex async workflows',
-      'Built dynamic, reusable components for real-time data rendering',
-      'Managed global state with Redux Toolkit across multiple feature modules',
+      'Integrated RESTful APIs with Axios & Fetch API, handling complex async workflows and error states',
+      'Built dynamic, reusable React components for real-time data rendering and interactive user flows',
+      'Managed global state with Redux Toolkit across multiple feature modules for scalable API-driven workflows',
+      'Implemented robust error handling, loading state management & client-side validation to improve UX',
     ],
   },
   {
-    co: 'Jit-Tek', badge: '', role: 'Associate SWE',
+    co: 'Jit-Tek', badge: '', role: 'Associate Software Engineer',
     period: 'Jul 2022 – Dec 2022', main: false,
     bullets: [
-      'Developed responsive UI components with React.js and Material UI',
-      'Implemented basic Node.js API endpoints to support frontend requirements',
-      'Participated in testing, debugging, and peer code reviews',
+      'Developed responsive, reusable UI components with React.js and Material UI following component-driven design',
+      'Implemented basic Node.js API endpoints to support frontend data requirements',
+      'Participated in testing, debugging & peer code reviews to maintain code quality standards',
     ],
   },
 ];
@@ -39,8 +41,8 @@ export default function Experience() {
             <h2 id="exp-h" className="stitle inv">Work <span className="gt">Experience</span></h2>
           </div>
           <p className="exp-hd-r rev-r d1">
-            4+ years across healthcare SaaS, startups, and service companies —
-            shipping production-grade React frontends end-to-end.
+            4 years across healthcare SaaS, product startups & service companies —
+            owning the full frontend lifecycle from Figma handoff to production deployment.
           </p>
         </div>
 
@@ -77,7 +79,7 @@ export default function Experience() {
               <div>
                 <div className="edu-deg">Bachelor of Technology — Information Technology</div>
                 <div className="edu-col">Government Engineering College Barton Hill, Thiruvananthapuram</div>
-                <div className="edu-yr">Graduated 2022 · Idukki, Kerala</div>
+                <div className="edu-yr">Graduated 2022 · Thiruvananthapuram, Kerala</div>
               </div>
             </div>
           </div>
